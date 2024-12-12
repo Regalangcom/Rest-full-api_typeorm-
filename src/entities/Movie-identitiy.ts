@@ -1,0 +1,38 @@
+import { BaseEntity, Column , 
+    CreateDateColumn, 
+    Entity, 
+    PrimaryGeneratedColumn,
+    UpdateDateColumn} from "typeorm"
+
+
+@Entity( "movies")
+export class Movie  extends BaseEntity {
+
+@PrimaryGeneratedColumn("uuid")
+id!      : string
+
+@Column({nullable : false  })
+title!   : string
+
+@Column({nullable : false})
+description! : string
+
+@Column({nullable : false})
+director!  : string
+
+@Column({nullable : false})
+year!      : number
+
+@Column({nullable : false})
+rating!    : string
+
+@Column({nullable : false})
+images!    : string
+
+@CreateDateColumn()
+createdAt! : Date
+
+@UpdateDateColumn()
+updatedAt! : Date
+
+}
