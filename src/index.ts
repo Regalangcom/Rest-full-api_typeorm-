@@ -12,6 +12,7 @@ import route from "./routes/Route.movie";
 const app: Express = express();
 const { DB_PORT_SERVER } = process.env;
 
+// implementation middleware
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(routes);
